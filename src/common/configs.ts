@@ -45,6 +45,7 @@ export interface BasicShapeStyle {
   strokeColor?: string
   strokeDasharray?: string | number
   color: string
+  glow?: NodeGlowConfig
 }
 
 type Percent = `${number}%`;
@@ -208,6 +209,12 @@ export interface NodeFocusRingStyle {
   padding: number
   color: string
   dasharray?: string | number
+}
+
+export interface NodeGlowConfig {
+  radius: number
+  color?: string
+  visible?: boolean
 }
 
 export interface NodeConfig<N extends Node = Node> {

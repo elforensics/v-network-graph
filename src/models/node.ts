@@ -1,9 +1,10 @@
 import { ComputedRef, UnwrapRef, Ref } from "vue"
-import { ShapeStyle, NodeLabelStyle, OppositeNode } from "@/common/configs"
+import { ShapeStyle, NodeLabelStyle, OppositeNode, NodeGlowConfig } from "@/common/configs"
 
 export interface NodeStateDatum {
   id: string
   shape: ComputedRef<ShapeStyle>
+  glow: ComputedRef<NodeGlowConfig>
   staticShape: ComputedRef<ShapeStyle>
   label: ComputedRef<NodeLabelStyle>
   labelText: ComputedRef<string>
